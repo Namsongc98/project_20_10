@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <!-- Câu đố: phép nhân (NHÂN) + quân Hậu trong cờ vua (HẬU) = NHÂN HẬU -->
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFF8F0"/>
+      <stop offset="1" stop-color="#FDE8EC"/>
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="720" fill="url(#bg)"/>
+
+  <!-- Bảng phấn với phép nhân, dấu × được khoanh tròn -->
+  <g transform="translate(320 370)">
+    <rect x="-250" y="-170" width="500" height="340" rx="18" fill="#B07A45"/>
+    <rect x="-226" y="-146" width="452" height="292" rx="8" fill="#3F6B57"/>
+    <rect x="-120" y="170" width="240" height="16" rx="8" fill="#8C5E33"/>
+    <g transform="translate(-14 0) scale(0.86)">
+    <g fill="none" stroke="#FFFFFF" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" opacity="0.92">
+      <!-- 2 -->
+      <path d="M-200 -30 C -200 -70, -140 -70, -140 -30 C -140 0, -200 30, -200 50 L -138 50"/>
+      <!-- 3 -->
+      <path d="M50 -60 C 70 -75, 110 -70, 110 -40 C 110 -15, 80 -10, 72 -10 C 85 -10, 115 0, 115 25 C 115 60, 65 65, 48 45"/>
+      <!-- = -->
+      <path d="M140 -15 L 170 -15 M140 15 L 170 15"/>
+      <!-- 6 -->
+      <path d="M232 -62 C 200 -60, 186 -20, 188 15 C 190 50, 225 58, 232 32 C 240 5, 215 -10, 190 10"/>
+    </g>
+    <circle cx="-45" cy="0" r="62" fill="none" stroke="#F48FA6" stroke-width="8" stroke-dasharray="300 30"/>
+    <path d="M-80 -35 L -10 35 M-10 -35 L -80 35" stroke="#F48FA6" stroke-width="16" stroke-linecap="round"/>
+    </g>
+  </g>
+
+  <!-- Dấu cộng -->
+  <g fill="#9B435A">
+    <rect x="610" y="351" width="60" height="18" rx="9"/>
+    <rect x="631" y="330" width="18" height="60" rx="9"/>
+  </g>
+
+  <!-- Quân Hậu (cờ vua) -->
+  <g transform="translate(960 380)" stroke="#9B435A" stroke-width="6" stroke-linejoin="round">
+    <g fill="#FFFFFF">
+      <rect x="-120" y="165" width="240" height="40" rx="12"/>
+      <path d="M-95 165 C -90 135, 90 135, 95 165Z"/>
+      <path d="M-60 135 C -45 60, -40 0, -55 -40 L 55 -40 C 40 0, 45 60, 60 135Z"/>
+      <rect x="-80" y="-58" width="160" height="26" rx="10"/>
+      <path d="M-85 -60 L -105 -170 L -55 -110 L -30 -185 L 0 -115 L 30 -185 L 55 -110 L 105 -170 L 85 -60Z"/>
+    </g>
+    <g fill="#F48FA6">
+      <circle cx="-105" cy="-178" r="14"/>
+      <circle cx="-30" cy="-195" r="14"/>
+      <circle cx="30" cy="-195" r="14"/>
+      <circle cx="105" cy="-178" r="14"/>
+      <circle cx="0" cy="-130" r="16" fill="#E8577A"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <!-- Câu đố: người phụ nữ nhiều tay, mỗi tay một việc (nấu ăn, làm việc, quét nhà, chăm con, đi chợ, nghe máy) = ĐẢM ĐANG -->
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFF8F0"/>
+      <stop offset="1" stop-color="#FDE8EC"/>
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="720" fill="url(#bg)"/>
+
+  <!-- Tóc phía sau -->
+  <ellipse cx="640" cy="255" rx="78" ry="90" fill="#4A2E2A"/>
+
+  <!-- Sáu cánh tay -->
+  <g fill="none" stroke="#F5CBA7" stroke-width="26" stroke-linecap="round">
+    <path d="M605 330 Q 500 230 400 170"/>
+    <path d="M605 340 Q 470 330 335 360"/>
+    <path d="M610 350 Q 520 420 410 533"/>
+    <path d="M675 330 Q 780 230 880 170"/>
+    <path d="M675 340 Q 820 330 960 345"/>
+    <path d="M670 350 Q 760 440 872 560"/>
+  </g>
+
+  <!-- Chảo rán trứng -->
+  <g>
+    <line x1="375" y1="150" x2="410" y2="178" stroke="#6B4A2E" stroke-width="16" stroke-linecap="round"/>
+    <circle cx="320" cy="105" r="64" fill="#3A3A44"/>
+    <circle cx="320" cy="105" r="50" fill="#55555F"/>
+    <path d="M285 100 C 285 70, 345 65, 352 95 C 360 125, 300 140, 285 100Z" fill="#FFFFFF"/>
+    <circle cx="318" cy="100" r="15" fill="#F2C14E"/>
+  </g>
+
+  <!-- Laptop -->
+  <g>
+    <rect x="175" y="245" width="160" height="108" rx="8" fill="#6C7A89"/>
+    <rect x="186" y="256" width="138" height="86" rx="4" fill="#BFE3F2"/>
+    <g stroke="#6C7A89" stroke-width="5" stroke-linecap="round">
+      <line x1="200" y1="275" x2="260" y2="275"/>
+      <line x1="215" y1="292" x2="300" y2="292"/>
+      <line x1="215" y1="309" x2="280" y2="309"/>
+    </g>
+    <polygon points="160,353 350,353 368,378 142,378" fill="#9AA6B2"/>
+  </g>
+
+  <!-- Chổi -->
+  <g>
+    <line x1="455" y1="473" x2="325" y2="645" stroke="#B07A45" stroke-width="12" stroke-linecap="round"/>
+    <polygon points="300,622 360,660 330,712 250,670" fill="#F2C14E" stroke="#D9A73A" stroke-width="4" stroke-linejoin="round"/>
+    <g stroke="#D9A73A" stroke-width="3">
+      <line x1="318" y1="642" x2="290" y2="690"/>
+      <line x1="338" y1="652" x2="312" y2="700"/>
+    </g>
+  </g>
+
+  <!-- Bình sữa -->
+  <g>
+    <path d="M915 78 C 915 40, 955 40, 955 78Z" fill="#F6D2A8"/>
+    <rect x="897" y="74" width="76" height="24" rx="6" fill="#F48FA6"/>
+    <rect x="902" y="96" width="66" height="118" rx="18" fill="#FFFFFF" stroke="#C9C9D3" stroke-width="5"/>
+    <rect x="907" y="140" width="56" height="70" rx="14" fill="#FFF4D6"/>
+    <g stroke="#C9C9D3" stroke-width="3">
+      <line x1="950" y1="120" x2="962" y2="120"/>
+      <line x1="950" y1="145" x2="962" y2="145"/>
+      <line x1="950" y1="170" x2="962" y2="170"/>
+    </g>
+  </g>
+
+  <!-- Giỏ đi chợ -->
+  <g>
+    <path d="M985 360 A 60 62 0 0 1 1105 360" fill="none" stroke="#A0663A" stroke-width="10"/>
+    <ellipse cx="1015" cy="350" rx="16" ry="32" fill="#7DB88A" transform="rotate(-20 1015 350)"/>
+    <ellipse cx="1040" cy="345" rx="14" ry="30" fill="#5E9B6B"/>
+    <polygon points="1065,360 1100,300 1082,362" fill="#F08A3C"/>
+    <ellipse cx="1080" cy="352" rx="18" ry="14" fill="#E04B4B"/>
+    <polygon points="975,360 1115,360 1100,450 990,450" fill="#C98B55" stroke="#A0663A" stroke-width="5" stroke-linejoin="round"/>
+    <g stroke="#A0663A" stroke-width="3">
+      <line x1="980" y1="390" x2="1110" y2="390"/>
+      <line x1="985" y1="420" x2="1105" y2="420"/>
+      <line x1="1020" y1="360" x2="1025" y2="450"/>
+      <line x1="1065" y1="360" x2="1062" y2="450"/>
+    </g>
+  </g>
+
+  <!-- Điện thoại -->
+  <g>
+    <rect x="882" y="495" width="82" height="142" rx="14" fill="#2F2F3A"/>
+    <rect x="890" y="508" width="66" height="112" rx="6" fill="#9FD3E8"/>
+    <path d="M923 578 C 905 565, 900 548, 912 542 C 918 539, 922 543, 923 548 C 924 543, 928 539, 934 542 C 946 548, 941 565, 923 578Z" fill="#E8577A"/>
+  </g>
+
+  <!-- Bàn tay -->
+  <g fill="#F5CBA7" stroke="#D99E78" stroke-width="3">
+    <circle cx="400" cy="170" r="22"/>
+    <circle cx="335" cy="360" r="22"/>
+    <circle cx="410" cy="533" r="22"/>
+    <circle cx="890" cy="170" r="22"/>
+    <circle cx="975" cy="350" r="22"/>
+    <circle cx="880" cy="562" r="22"/>
+  </g>
+
+  <!-- Thân, váy -->
+  <path d="M598 318 Q 640 298 682 318 L 742 660 Q 640 692 538 660Z" fill="#E8577A"/>
+  <path d="M598 318 Q 640 298 682 318 L 690 362 Q 640 380 590 362Z" fill="#F48FA6"/>
+  <g transform="translate(640 345)">
+    <circle r="12" fill="#FFFFFF"/>
+    <circle r="5" fill="#F2C14E"/>
+  </g>
+  <rect x="628" y="280" width="24" height="32" fill="#F5CBA7"/>
+  <ellipse cx="610" cy="700" rx="26" ry="12" fill="#4A2E2A"/>
+  <ellipse cx="670" cy="700" rx="26" ry="12" fill="#4A2E2A"/>
+
+  <!-- Đầu, mặt -->
+  <circle cx="640" cy="232" r="62" fill="#F5CBA7"/>
+  <path d="M576 238 C 566 160, 714 160, 704 238 C 690 198, 600 192, 576 238Z" fill="#4A2E2A"/>
+  <circle cx="640" cy="160" r="30" fill="#4A2E2A"/>
+  <circle cx="618" cy="238" r="7" fill="#1F1417"/>
+  <circle cx="662" cy="238" r="7" fill="#1F1417"/>
+  <ellipse cx="604" cy="258" rx="12" ry="7" fill="#F48FA6" opacity="0.7"/>
+  <ellipse cx="676" cy="258" rx="12" ry="7" fill="#F48FA6" opacity="0.7"/>
+  <path d="M618 262 Q 640 284 662 262" fill="none" stroke="#9B435A" stroke-width="5" stroke-linecap="round"/>
+
+  <!-- Giọt mồ hôi: bận rộn -->
+  <path d="M722 190 C 735 210, 740 222, 730 232 C 720 240, 706 232, 710 218 C 712 210, 716 202, 722 190Z" fill="#9FD3E8"/>
+</svg>

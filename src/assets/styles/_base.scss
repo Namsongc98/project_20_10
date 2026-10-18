@@ -1,0 +1,94 @@
+@use 'tokens' as *;
+
+// CSS custom properties — chỉ xuất một lần tại đây
+:root {
+  --stage-width: #{$stage-width};
+  --stage-height: #{$stage-height};
+
+  --color-blush: #{$color-blush};
+  --color-blush-soft: #{$color-blush-soft};
+  --color-pink: #{$color-pink};
+  --color-cream: #{$color-cream};
+  --color-champagne: #{$color-champagne};
+  --color-rose: #{$color-rose};
+  --color-ink: #{$color-ink};
+  --color-surface: #{$color-surface};
+  --color-letterbox: #{$color-letterbox};
+
+  --font-display: #{$font-display};
+  --font-body: #{$font-body};
+
+  --text-hero: #{$text-hero};
+  --text-h1: #{$text-h1};
+  --text-h2: #{$text-h2};
+  --text-h3: #{$text-h3};
+  --text-body: #{$text-body};
+  --text-small: #{$text-small};
+
+  --radius-sm: #{$radius-sm};
+  --radius-md: #{$radius-md};
+  --radius-lg: #{$radius-lg};
+  --shadow-soft: #{$shadow-soft};
+
+  --ease-out: #{$ease-out};
+  --duration-fast: #{$duration-fast};
+  --duration-base: #{$duration-base};
+  --duration-slow: #{$duration-slow};
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body,
+#app {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  overflow: hidden;
+  background: $color-letterbox;
+  color: $color-ink;
+  font-family: $font-body;
+  font-size: $text-body;
+  line-height: 1.4;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  user-select: none;
+}
+
+img,
+video,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3 {
+  font-family: $font-display;
+  font-weight: 700;
+  line-height: 1.15;
+  color: $color-rose;
+}
+
+// Chia đều các dòng, tránh dòng cuối chỉ còn 1–2 chữ
+h1,
+h2,
+h3,
+p {
+  text-wrap: balance;
+}
+
+// Ẩn con trỏ chuột khi không di chuyển (class do JS bật/tắt)
+.is-cursor-hidden,
+.is-cursor-hidden * {
+  cursor: none !important;
+}

@@ -1,0 +1,41 @@
+// Design tokens — Một Ngày Dành Cho Phái Đẹp
+// Chỉ chứa biến SCSS (không sinh CSS) để component có thể @use mà không bị lặp; CSS custom properties xuất ở _base.scss.
+
+// Kích thước stage cố định (16:9)
+$stage-width: 1920px;
+$stage-height: 1080px;
+
+// Màu sắc
+$color-blush: #f4c7cf;
+$color-blush-soft: #fde8ec;
+$color-pink: #e8577a;
+$color-cream: #fff8f0;
+$color-champagne: #d8b778;
+$color-rose: #9b435a;
+$color-ink: #432b32;
+$color-surface: #ffffff;
+$color-letterbox: #1f1417;
+
+// Typography
+$font-display: 'Playfair Display', Georgia, 'Times New Roman', serif;
+$font-body: 'Be Vietnam Pro', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+
+// Cỡ chữ theo pixel của stage 1920×1080 (đã tính cho khoảng cách xem máy chiếu)
+$text-hero: 112px;
+$text-h1: 88px;
+$text-h2: 64px;
+$text-h3: 44px;
+$text-body: 36px;
+$text-small: 28px;
+
+// Bo góc, đổ bóng
+$radius-sm: 16px;
+$radius-md: 28px;
+$radius-lg: 48px;
+$shadow-soft: 0 24px 60px rgba(155, 67, 90, 0.18);
+
+// Chuyển động
+$ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+$duration-fast: 200ms;
+$duration-base: 450ms;
+$duration-slow: 900ms;

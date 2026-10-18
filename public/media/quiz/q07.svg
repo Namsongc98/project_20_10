@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <!-- Câu đố: cái đầu + công tắc tắt (ĐẦU TẮT) + khuôn mặt + trời tối (MẶT TỐI) = ĐẦU TẮT MẶT TỐI -->
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFF8F0"/>
+      <stop offset="1" stop-color="#FDE8EC"/>
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="720" fill="url(#bg)"/>
+
+  <!-- Cái đầu (nhìn nghiêng) -->
+  <g transform="translate(165 360)">
+    <rect x="-28" y="80" width="56" height="70" fill="#F5CBA7"/>
+    <ellipse rx="95" ry="108" fill="#F5CBA7"/>
+    <path d="M88 -18 Q 122 12 90 32Z" fill="#F5CBA7"/>
+    <path d="M-95 10 C -112 -95, -40 -120, 20 -110 C 72 -104, 98 -72, 94 -40 C 60 -70, 10 -62, -12 -40 C -22 0, -40 45, -62 92 C -92 72, -96 40, -95 10Z" fill="#4A2E2A"/>
+    <ellipse cx="-18" cy="12" rx="16" ry="25" fill="#F5CBA7" stroke="#D99E78" stroke-width="3"/>
+    <circle cx="55" cy="-12" r="9" fill="#1F1417"/>
+    <path d="M62 50 L 82 48" stroke="#9B435A" stroke-width="5" stroke-linecap="round"/>
+  </g>
+
+  <!-- Công tắc đang TẮT -->
+  <g transform="translate(420 360)">
+    <rect x="-80" y="-125" width="160" height="250" rx="24" fill="#FFFFFF" stroke="#C9C9D3" stroke-width="6"/>
+    <rect x="-30" y="-72" width="60" height="144" rx="14" fill="#E6E6EC"/>
+    <rect x="-24" y="2" width="48" height="66" rx="10" fill="#9B435A"/>
+    <text y="-88" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#B8B8C4">ON</text>
+    <text y="108" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="#9B435A">OFF</text>
+  </g>
+
+  <!-- Dấu cộng -->
+  <g fill="#9B435A">
+    <rect x="610" y="351" width="60" height="18" rx="9"/>
+    <rect x="631" y="330" width="18" height="60" rx="9"/>
+  </g>
+
+  <!-- Khuôn mặt (nhìn thẳng) -->
+  <g transform="translate(860 360)">
+    <circle r="108" fill="#F5CBA7"/>
+    <path d="M-108 -5 C -115 -110, 115 -110, 108 -5 C 90 -60, 30 -70, 0 -55 C -30 -70, -90 -60, -108 -5Z" fill="#4A2E2A"/>
+    <circle cx="-38" cy="5" r="11" fill="#1F1417"/>
+    <circle cx="38" cy="5" r="11" fill="#1F1417"/>
+    <ellipse cx="-62" cy="35" rx="16" ry="9" fill="#F48FA6" opacity="0.7"/>
+    <ellipse cx="62" cy="35" rx="16" ry="9" fill="#F48FA6" opacity="0.7"/>
+    <path d="M-34 45 Q 0 75 34 45" fill="none" stroke="#9B435A" stroke-width="7" stroke-linecap="round"/>
+  </g>
+
+  <!-- Trời tối: trăng và sao -->
+  <g transform="translate(1125 360)">
+    <rect x="-112" y="-112" width="224" height="224" rx="32" fill="#2E2A4A"/>
+    <circle cx="10" cy="-10" r="58" fill="#F6E3B4"/>
+    <circle cx="38" cy="-34" r="54" fill="#2E2A4A"/>
+    <g fill="#F6E3B4">
+      <path d="M-62 -70 l7 -18 l7 18 l18 7 l-18 7 l-7 18 l-7 -18 l-18 -7Z"/>
+      <path d="M60 55 l5 -13 l5 13 l13 5 l-13 5 l-5 13 l-5 -13 l-13 -5Z"/>
+      <circle cx="-60" cy="62" r="5"/>
+      <circle cx="72" cy="-78" r="4"/>
+    </g>
+  </g>
+</svg>

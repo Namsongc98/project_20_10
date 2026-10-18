@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <!-- Câu đố: số 3 chìm dưới nước + số 7 nổi trên mặt nước = BA CHÌM BẢY NỔI -->
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFF8F0"/>
+      <stop offset="1" stop-color="#FDE8EC"/>
+    </linearGradient>
+    <linearGradient id="water" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#8CCBE6"/>
+      <stop offset="1" stop-color="#3E7FA8"/>
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="720" fill="url(#bg)"/>
+
+  <!-- Hai số vẽ trước, nước phủ lên: số 3 chìm hẳn, số 7 chỉ ngập phần chân (nổi) -->
+  <text x="380" y="650" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="300" font-weight="700" fill="#9B435A">3</text>
+
+  <text x="900" y="400" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="300" font-weight="700" fill="#E8577A">7</text>
+
+  <!-- Nước -->
+  <path d="M0 340 Q 80 310 160 340 T 320 340 T 480 340 T 640 340 T 800 340 T 960 340 T 1120 340 T 1280 340 L1280 720 L0 720Z" fill="url(#water)" opacity="0.82"/>
+
+  <!-- Bọt khí từ số 3 -->
+  <g fill="none" stroke="#FFFFFF" stroke-width="4" opacity="0.85">
+    <circle cx="440" cy="440" r="12"/>
+    <circle cx="465" cy="395" r="9"/>
+    <circle cx="448" cy="360" r="6"/>
+    <circle cx="320" cy="420" r="8"/>
+  </g>
+
+  <!-- Gợn sóng quanh số 7 -->
+  <g fill="none" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" opacity="0.9">
+    <path d="M750 370 Q 790 382 830 370"/>
+    <path d="M965 370 Q 1005 382 1045 370"/>
+    <path d="M720 400 Q 770 414 820 400"/>
+    <path d="M985 400 Q 1035 414 1085 400"/>
+  </g>
+
+  <!-- Sóng trang trí -->
+  <g fill="none" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" opacity="0.5">
+    <path d="M90 520 q 40 -18 80 0"/>
+    <path d="M620 600 q 40 -18 80 0"/>
+    <path d="M1100 540 q 40 -18 80 0"/>
+  </g>
+</svg>
