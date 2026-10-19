@@ -45,6 +45,16 @@ export const event = {
   quiz: {
     title: 'Đuổi hình bắt chữ',
     hintLabel: 'Nhìn hình đoán chữ',
+    // Màn giới thiệu trước câu 1 — icon: 'eye' | 'hand' | 'gift' | 'bulb'
+    intro: {
+      rules: [
+        { icon: 'eye', title: 'Nhìn hình', text: 'Mỗi câu là một bức hình ghép, ẩn một từ hoặc một câu thành ngữ.' },
+        { icon: 'hand', title: 'Giơ tay nhanh', text: 'Ai giơ tay nhanh nhất sẽ giành quyền trả lời.' },
+        { icon: 'gift', title: 'Đúng là có quà', text: 'Trả lời đúng nhận quà ngay. Sai thì nhường lượt người tiếp theo.' },
+        { icon: 'bulb', title: 'Bí thì có gợi ý', text: 'MC sẽ mở gợi ý cùng chữ cái đầu của mỗi từ.' },
+      ],
+      topics: ['Đức tính người phụ nữ', 'Thành ngữ, tục ngữ', 'Tục ngữ qua góc nhìn IT'],
+    },
   },
 
   teaBreak: {

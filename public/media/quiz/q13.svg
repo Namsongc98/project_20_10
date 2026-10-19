@@ -1,6 +1,72 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFE3E9"/><stop offset="1" stop-color="#F7B6C4"/></linearGradient></defs>
-  <rect width="1280" height="720" fill="url(#g)"/>
-  <text x="640" y="380" text-anchor="middle" font-family="sans-serif" font-size="220" font-weight="800" fill="#FFFFFF" opacity="0.85">13</text>
-  <text x="640" y="500" text-anchor="middle" font-family="sans-serif" font-size="44" fill="#9B435A">Ảnh câu đố mẫu — thay bằng hình chính thức</text>
+  <!-- Câu đố: lập trình viên kiên trì leo cầu thang code tới lá cờ thành công (CÓ CHÍ) + cây nến bị gạch dấu sắc (NẾN → NÊN) = CÓ CHÍ THÌ NÊN -->
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFF8F0"/>
+      <stop offset="1" stop-color="#FDE8EC"/>
+    </linearGradient>
+    <radialGradient id="glow">
+      <stop offset="0" stop-color="#FFE58A" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#FFE58A" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1280" height="720" fill="url(#bg)"/>
+
+  <!-- Cầu thang bằng các khối code -->
+  <ellipse cx="330" cy="604" rx="240" ry="14" fill="#9B435A" opacity="0.1"/>
+  <g fill="#3A3A44">
+    <rect x="120" y="530" width="80" height="70" rx="6"/>
+    <rect x="200" y="460" width="80" height="140" rx="6"/>
+    <rect x="280" y="390" width="80" height="210" rx="6"/>
+    <rect x="360" y="320" width="80" height="280" rx="6"/>
+    <rect x="440" y="250" width="80" height="350" rx="6"/>
+  </g>
+  <g font-family="Menlo, Consolas, monospace" font-size="26" font-weight="700" fill="#7DB88A" text-anchor="middle">
+    <text x="160" y="574">&lt;/&gt;</text>
+    <text x="240" y="504">{ }</text>
+    <text x="320" y="434">( )</text>
+    <text x="400" y="364">01</text>
+    <text x="480" y="294">&lt;/&gt;</text>
+  </g>
+
+  <!-- Lá cờ thành công trên đỉnh -->
+  <line x1="500" y1="250" x2="500" y2="120" stroke="#9B435A" stroke-width="6" stroke-linecap="round"/>
+  <polygon points="500,122 580,147 500,172" fill="#E8577A"/>
+  <path d="M520 147 l 12 12 l 22 -24" fill="none" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Lập trình viên đang leo -->
+  <g stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <path d="M345 352 L 325 390" stroke="#C98B55" stroke-width="14"/>
+    <path d="M345 352 L 378 336 L 396 320" stroke="#C98B55" stroke-width="14"/>
+    <path d="M348 296 L 322 322" stroke="#F5CBA7" stroke-width="12"/>
+    <path d="M352 292 L 392 278 L 410 252" stroke="#F5CBA7" stroke-width="12"/>
+  </g>
+  <path d="M332 290 Q 352 280 368 290 L 362 356 L 330 356Z" fill="#6C8EBF"/>
+  <circle cx="352" cy="262" r="24" fill="#F5CBA7"/>
+  <path d="M328 262 C 326 236, 378 236, 376 258 C 362 248, 342 248, 328 262Z" fill="#2F2F3A"/>
+  <circle cx="362" cy="264" r="3.5" fill="#1F1417"/>
+  <path d="M356 276 q 6 4 12 0" fill="none" stroke="#9B435A" stroke-width="3" stroke-linecap="round"/>
+  <path d="M322 238 C 328 248, 330 254, 326 259 C 322 263, 316 259, 317 253 C 318 249, 320 244, 322 238Z" fill="#9FD3E8"/>
+
+  <!-- Dấu cộng -->
+  <g fill="#9B435A">
+    <rect x="610" y="351" width="60" height="18" rx="9"/>
+    <rect x="631" y="330" width="18" height="60" rx="9"/>
+  </g>
+
+  <!-- Cây nến đang cháy -->
+  <g transform="translate(960 400)">
+    <circle cx="0" cy="-200" r="150" fill="url(#glow)"/>
+    <ellipse cy="198" rx="130" ry="22" fill="#D9A73A"/>
+    <rect x="-110" y="170" width="220" height="28" rx="12" fill="#F2C14E"/>
+    <rect x="-60" y="-120" width="120" height="290" rx="14" fill="#FFF4D6" stroke="#E9D7C0" stroke-width="5"/>
+    <path d="M-60 -100 C -60 -70, -48 -60, -44 -40 C -40 -20, -30 -20, -28 -50 C -26 -80, -10 -85, -6 -60 C -2 -35, 10 -30, 14 -55 C 18 -85, 30 -80, 34 -65 C 38 -50, 50 -45, 60 -70 L 60 -106Z" fill="#FDE8EC"/>
+    <ellipse cx="0" cy="-120" rx="60" ry="12" fill="#FDE8EC" stroke="#E9D7C0" stroke-width="4"/>
+    <line x1="0" y1="-122" x2="0" y2="-150" stroke="#4A2E2A" stroke-width="5" stroke-linecap="round"/>
+    <path d="M0 -255 C 28 -215, 34 -185, 18 -165 C 8 -152, -8 -152, -18 -165 C -34 -185, -28 -215, 0 -255Z" fill="#F7B733"/>
+    <path d="M0 -215 C 13 -195, 15 -180, 8 -170 C 4 -164, -4 -164, -8 -170 C -15 -180, -13 -195, 0 -215Z" fill="#E8577A"/>
+    <!-- Dấu sắc bị gạch bỏ: NẾN bỏ dấu sắc → NÊN -->
+    <line x1="82" y1="-196" x2="138" y2="-282" stroke="#9B435A" stroke-width="20" stroke-linecap="round"/>
+    <line x1="66" y1="-268" x2="156" y2="-208" stroke="#E04B4B" stroke-width="9" stroke-linecap="round"/>
+  </g>
 </svg>

@@ -10,7 +10,7 @@ import { useQuizGame } from '@/composables/useQuizGame'
 import { useSoundEffects } from '@/composables/useSoundEffects'
 
 const { slides, currentSlide, currentSlideIndex, goTo, next, prev } = usePresentation()
-const { total, isAnswerVisible, goToQuestion, nextQuestion, prevQuestion, toggleAnswer } = useQuizGame()
+const { total, goToQuestion, goToIntro, nextQuestion, prevQuestion, toggleAnswer, toggleHint } = useQuizGame()
 const { enterSlide, playSlideMusic, toggleMusic, playEffect } = useMusic()
 const { isMuted, toggleMute } = useSoundEffects()
 const isHelpOpen = ref(false)
@@ -24,16 +24,14 @@ watch(() => currentSlide.value.id, enterSlide, { immediate: true })
 
 // Phím Q: hiện đáp án kèm tiếng ta-da; ẩn đáp án thì không phát
 function handleToggleAnswer() {
-  if (!isQuiz()) return
-  toggleAnswer()
-  if (isAnswerVisible.value) playEffect('taDa')
+  if (isQuiz() && toggleAnswer()) playEffect('taDa')
 }
 
-// Ở màn game: ←/→ chuyển câu; câu cuối → sang Tea break, câu 1 ← về Tặng hoa.
-// Vào game bằng → thì bắt đầu từ câu 1; quay lại bằng ← từ Tea break thì vào câu cuối.
+// Ở màn game: ←/→ chuyển giữa màn giới thiệu và các câu; câu cuối → sang Tea break, giới thiệu ← về Tặng hoa.
+// Vào game bằng → thì bắt đầu từ màn giới thiệu; quay lại bằng ← từ Tea break thì vào câu cuối.
 function handleNext() {
   if (isQuiz() && nextQuestion()) return
-  if (slides[currentSlideIndex.value + 1]?.id === 'quiz') goToQuestion(0)
+  if (slides[currentSlideIndex.value + 1]?.id === 'quiz') goToIntro()
   next()
 }
 
@@ -48,6 +46,7 @@ useKeyboardControls({
   prev: handlePrev,
   goTo,
   toggleAnswer: handleToggleAnswer,
+  toggleHint: () => isQuiz() && toggleHint(),
   toggleMusic,
   playSlideMusic,
   applause: () => playEffect('applause'),

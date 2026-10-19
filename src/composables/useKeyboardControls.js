@@ -7,6 +7,7 @@ const CODE_TO_ACTION = {
   ArrowLeft: 'prev',
   PageUp: 'prev',
   KeyQ: 'toggleAnswer',
+  KeyG: 'toggleHint',
   KeyF: 'toggleMusic',
   KeyP: 'playSlideMusic',
   KeyV: 'applause',
@@ -33,7 +34,7 @@ function isTypingTarget(target) {
 
 /**
  * Gắn phím điều khiển toàn cục.
- * @param {Object} handlers - { next, prev, goTo(index), toggleAnswer, toggleFullscreen, toggleHelp, toggleSound, toggleMusic, playSlideMusic, applause, escape }
+ * @param {Object} handlers - { next, prev, goTo(index), toggleAnswer, toggleHint, toggleFullscreen, toggleHelp, toggleSound, toggleMusic, playSlideMusic, applause, escape }
  */
 export function useKeyboardControls(handlers) {
   function onKeydown(event) {

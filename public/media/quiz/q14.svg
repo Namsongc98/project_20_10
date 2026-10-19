@@ -1,6 +1,81 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFE3E9"/><stop offset="1" stop-color="#F7B6C4"/></linearGradient></defs>
-  <rect width="1280" height="720" fill="url(#g)"/>
-  <text x="640" y="380" text-anchor="middle" font-family="sans-serif" font-size="220" font-weight="800" fill="#FFFFFF" opacity="0.85">14</text>
-  <text x="640" y="500" text-anchor="middle" font-family="sans-serif" font-size="44" fill="#9B435A">Ảnh câu đố mẫu — thay bằng hình chính thức</text>
+  <!-- Câu đố: số 100 + ngón cái giơ lên (TRĂM HAY) + dấu ≠ (KHÔNG BẰNG) + bàn tay gõ phím thành thạo (TAY QUEN) = TRĂM HAY KHÔNG BẰNG TAY QUEN -->
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFF8F0"/>
+      <stop offset="1" stop-color="#FDE8EC"/>
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="720" fill="url(#bg)"/>
+
+  <!-- Số 100 -->
+  <text x="190" y="440" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="180" font-weight="700" fill="#9B435A">100</text>
+
+  <!-- Ngón tay cái giơ lên: HAY -->
+  <g transform="translate(445 395)">
+    <rect x="-46" y="-150" width="46" height="130" rx="23" fill="#F5CBA7" stroke="#D99E78" stroke-width="4" transform="rotate(-8 -23 -85)"/>
+    <rect x="-62" y="-40" width="124" height="140" rx="30" fill="#F5CBA7" stroke="#D99E78" stroke-width="4"/>
+    <g stroke="#D99E78" stroke-width="4" stroke-linecap="round">
+      <line x1="0" y1="-6" x2="56" y2="-6"/>
+      <line x1="0" y1="28" x2="58" y2="28"/>
+      <line x1="0" y1="62" x2="56" y2="62"/>
+    </g>
+    <rect x="-72" y="96" width="144" height="40" rx="8" fill="#6C8EBF"/>
+    <g fill="#F2C14E">
+      <path d="M-110 -150 l 8 -22 l 8 22 l 22 8 l -22 8 l -8 22 l -8 -22 l -22 -8Z"/>
+      <path d="M90 -120 l 6 -16 l 6 16 l 16 6 l -16 6 l -6 16 l -6 -16 l -16 -6Z"/>
+    </g>
+  </g>
+
+  <!-- Dấu khác (≠): KHÔNG BẰNG -->
+  <g fill="#9B435A">
+    <rect x="598" y="330" width="84" height="18" rx="9"/>
+    <rect x="598" y="372" width="84" height="18" rx="9"/>
+  </g>
+  <line x1="618" y1="420" x2="662" y2="300" stroke="#9B435A" stroke-width="14" stroke-linecap="round"/>
+
+  <!-- Bàn tay gõ phím thành thạo: TAY QUEN -->
+  <g transform="translate(980 470)">
+    <rect x="-240" y="-30" width="480" height="150" rx="18" fill="#3A3A44"/>
+    <g fill="#55555F">
+      <rect x="-220" y="-12" width="44" height="34" rx="6"/>
+      <rect x="-168" y="-12" width="44" height="34" rx="6"/>
+      <rect x="-116" y="-12" width="44" height="34" rx="6"/>
+      <rect x="-64" y="-12" width="44" height="34" rx="6"/>
+      <rect x="-12" y="-12" width="44" height="34" rx="6"/>
+      <rect x="40" y="-12" width="44" height="34" rx="6"/>
+      <rect x="92" y="-12" width="44" height="34" rx="6"/>
+      <rect x="144" y="-12" width="44" height="34" rx="6"/>
+      <rect x="-200" y="30" width="44" height="34" rx="6"/>
+      <rect x="-148" y="30" width="44" height="34" rx="6"/>
+      <rect x="-96" y="30" width="44" height="34" rx="6"/>
+      <rect x="-44" y="30" width="44" height="34" rx="6"/>
+      <rect x="8" y="30" width="44" height="34" rx="6"/>
+      <rect x="60" y="30" width="44" height="34" rx="6"/>
+      <rect x="112" y="30" width="44" height="34" rx="6"/>
+      <rect x="164" y="30" width="56" height="34" rx="6"/>
+      <rect x="-130" y="72" width="260" height="32" rx="6"/>
+    </g>
+    <g fill="#7DB88A">
+      <rect x="-64" y="-12" width="44" height="34" rx="6"/>
+      <rect x="40" y="-12" width="44" height="34" rx="6"/>
+    </g>
+    <path d="M250 -260 C 190 -210, 140 -170, 90 -120" fill="none" stroke="#6C8EBF" stroke-width="64" stroke-linecap="round"/>
+    <ellipse cx="40" cy="-90" rx="92" ry="58" fill="#F5CBA7" stroke="#D99E78" stroke-width="4"/>
+    <g fill="#F5CBA7" stroke="#D99E78" stroke-width="4">
+      <rect x="-52" y="-100" width="30" height="96" rx="15"/>
+      <rect x="-12" y="-110" width="30" height="104" rx="15"/>
+      <rect x="28" y="-108" width="30" height="102" rx="15"/>
+      <rect x="66" y="-98" width="28" height="90" rx="14"/>
+    </g>
+    <g fill="none" stroke="#9B435A" stroke-width="5" stroke-linecap="round" opacity="0.7">
+      <path d="M-80 -60 q -16 -16 0 -32"/>
+      <path d="M-100 -50 q -24 -26 0 -52"/>
+      <path d="M-50 18 l -8 14 M2 18 l 0 16 M54 18 l 8 14"/>
+    </g>
+  </g>
+  <g transform="translate(790 320)">
+    <circle r="44" fill="#7DB88A"/>
+    <path d="M-20 0 l 14 14 l 26 -30" fill="none" stroke="#FFFFFF" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
 </svg>

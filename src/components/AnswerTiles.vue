@@ -5,6 +5,8 @@ import { useSoundEffects } from '@/composables/useSoundEffects'
 const props = defineProps({
   answer: { type: String, required: true },
   revealed: { type: Boolean, default: false },
+  // Hiện gợi ý (phím G): lật chữ cái đầu của mỗi từ
+  hintVisible: { type: Boolean, default: false },
   // Cạnh ô chữ (px stage); chữ cái và khoảng cách co giãn theo
   tileSize: { type: Number, default: 112 },
 })
@@ -24,11 +26,36 @@ const words = computed(() => {
 const letterCount = computed(() => words.value.flat().length)
 const revealStep = computed(() => Math.min(120, 1800 / Math.max(letterCount.value, 1)))
 
-// Âm thanh lật ô đi cùng animation: hiện đáp án thì phát, ẩn hoặc đổi câu thì dừng
+// Ô gợi ý = chữ cái đầu mỗi từ; map order → vị trí trong lượt gợi ý để các ô gợi ý lật nối tiếp nhau
+const hintOrders = computed(() => new Map(words.value.map((word, i) => [word[0].order, i])))
+
+function isHinted(tile) {
+  return props.hintVisible && hintOrders.value.has(tile.order)
+}
+
+function isShown(tile) {
+  return props.revealed || isHinted(tile)
+}
+
+// Lật đáp án: theo thứ tự cả dãy · lật gợi ý: chỉ các ô gợi ý, nối tiếp nhau
+function revealDelay(tile) {
+  const step = props.revealed ? tile.order : (hintOrders.value.get(tile.order) ?? 0)
+  return `${step * revealStep.value}ms`
+}
+
+// Âm thanh lật ô đi cùng animation: hiện đáp án/gợi ý thì phát, ẩn hoặc đổi câu thì dừng
 const { playReveal, stopReveal } = useSoundEffects()
 watch(
   () => props.revealed,
   (revealed) => (revealed ? playReveal(letterCount.value, revealStep.value) : stopReveal()),
+)
+watch(
+  () => props.hintVisible,
+  (visible) => {
+    if (props.revealed) return
+    if (visible) playReveal(hintOrders.value.size, revealStep.value)
+    else stopReveal()
+  },
 )
 onBeforeUnmount(stopReveal)
 </script>
@@ -40,10 +67,10 @@ onBeforeUnmount(stopReveal)
         v-for="tile in word"
         :key="tile.order"
         class="tiles__tile"
-        :class="{ 'tiles__tile--revealed': revealed }"
+        :class="{ 'tiles__tile--revealed': revealed, 'tiles__tile--hinted': !revealed && isHinted(tile) }"
       >
-        <!-- Chưa hiện đáp án thì không render chữ vào DOM -->
-        <span v-if="revealed" class="tiles__char" :style="{ animationDelay: `${tile.order * revealStep}ms` }">
+        <!-- Ô chưa được lật thì không render chữ vào DOM -->
+        <span v-if="isShown(tile)" class="tiles__char" :style="{ animationDelay: revealDelay(tile) }">
           {{ tile.char }}
         </span>
       </span>
@@ -79,6 +106,12 @@ onBeforeUnmount(stopReveal)
 
     &--revealed {
       border-color: $color-pink;
+    }
+
+    // Ô lật nhờ gợi ý: viền vàng để phân biệt với lúc hiện cả đáp án
+    &--hinted {
+      border-color: $color-champagne;
+      background: rgba($color-champagne, 0.12);
     }
   }
 
